@@ -10,7 +10,7 @@ trocar.addEventListener('click', function(){
 
     if(nomeClasse == "modo-claro"){
         this.textContent = "Dark";
-    }
+    } 
     else {
         this.textContent = "Claro";
     }
