@@ -1,0 +1,36 @@
+/*<!--ADICIONAR ITNERATIVIDADE COM MODO CLARO E ESCURO (:root no CSS)-->*/
+:root{
+    --verde: #adff2f;
+    --branco: #ffffff;
+    --preto: #000000;
+}
+* {     /* '*' é seletor universal e se aplica a todos elementos da pag*/
+    color:var(--fontColor);
+    font-family: helvética;
+}
+
+body {
+    background-color: var(--bg);
+}
+    
+ul {
+font-family: helvética;
+}
+
+li {
+    list-style: circle;
+}
+    
+.list {
+list-style: square;
+}
+
+.modo-claro{
+    --bg:var(--verde);
+    --fontColor: var(--preto);
+}
+
+.modo-dark{
+    --bg: var(--preto);
+    --fontColor: var(--verde);
+}
