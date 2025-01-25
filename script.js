@@ -1,6 +1,17 @@
-//‘use strict’ //reduz erros silenciosos, melhora o desempenho,
-            // fornece mais avisos e menos recursos não seguros
 
+function efeito() {
+    var campos = document.querySelectorAll("#TxFSenha, #TxFConfSenha"); //Selecionar especificamente o '#' Id 
+    
+    campos.forEach(function(x) {
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    });
+}
+
+/*-------- THEME SWITCH -----------*/ 
 document.addEventListener('DOMContentLoaded', function() {
 const trocar = document.querySelector('.btn');
 
@@ -23,4 +34,6 @@ trocar.addEventListener('click', function(){
     document.body.classList.add('modo-claro');
     trocar.textContent = "Ativar para modo Escuro";
 });
+
+
 

@@ -40,6 +40,39 @@ li {
 list-style: square;
 }
 
+.a{
+    cursor: pointer;
+}
+/*--------------CONTEINER----------------------*/
+.conteiner{
+    background-color: #1E1E2D;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 530px;
+    width: 1000px;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.conteiner .content{      
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+}
+
+.conteiner .login-block{
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: calc(100%-50%);
+   height: 100%;
+   background-color: red;
+}
+/*----------- BOTAO DE SWITCH THEME -----------*/
 .btn{
     color:var(--btnFontColor);
     background-color: var(--btnBg);
@@ -47,10 +80,11 @@ list-style: square;
 
 .btn{
     position: absolute;
-    left: 250px;
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
+    bottom: 20px;
+    left: 60px;
+    height: 60px;
+    width: 130px;
+    border-radius: 30px;
     border: white;
     color: var(--btnFontColor);
     background-color: var(--btnBg);
