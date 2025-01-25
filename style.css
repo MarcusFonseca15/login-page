@@ -12,15 +12,15 @@
 .modo-claro{
     --bg:var(--verde);
     --fontColor: var(--preto);
-    --btnFontColor: var(var(--branco));
+    --btnFontColor: var(--branco);
     --btnBg: var(--preto);
 }
 
 .modo-dark{
     --bg: var(--preto);
     --fontColor: var(--verde);
-    --btnFontColor: var(--branco);
-    --btnBg: var(--preto);
+    --btnFontColor: var(--preto);
+    --btnBg: var(--verde);
 }
 /*##################     SELETOR DE TEMAS     ##################*/
 
@@ -48,11 +48,16 @@ list-style: square;
 .btn{
     position: absolute;
     left: 250px;
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
-    border: none;
+    border: white;
     color: var(--btnFontColor);
     background-color: var(--btnBg);
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: wheat;
+    color: #000000;
 }
 .btn:focus{ outline-style: none;} /*tira o contorno retangular qnd é selecionado*/
