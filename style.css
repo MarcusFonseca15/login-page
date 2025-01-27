@@ -57,21 +57,35 @@ list-style: square;
     flex-wrap: wrap;
     flex-direction: column;
     border-radius: 20px;
+    
 }
 .conteiner .content{      
     width: 50%;
     height: 100%;
     background-color: aqua;
+    background-image: url('./assets/landscape.png') no-repeat;
+    background-size: cover;
+    object-fit: contain;
+    background-position: center;
 }
 
 .conteiner .login-block{
    position: absolute;
    top: 0;
    right: 0;
-   width: calc(100%-50%);
+   width: 50%;
    height: 100%;
    background-color: red;
 }
+
+.conteiner .img-block{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+
 /*----------- BOTAO DE SWITCH THEME -----------*/
 .btn{
     color:var(--btnFontColor);
