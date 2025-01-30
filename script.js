@@ -47,19 +47,19 @@ olho1.onclick = function() {
 olho2.onclick = function() {
     let nomeClasse = document.body.className;
 
-    if (senha.type == "password") {
-        senha.type = "text";
+    if (TxFConfSenha.type == "password") {
+        TxFConfSenha.type = "text";
         if (nomeClasse == "modo-claro") {
             olho2.src = "./assets/eye-openLG.png";
         } else {
             olho2.src = "./assets/eye-open.png";
         }
     } else {
-        senha.type = "password";
+        TxFConfSenha.type = "password";
         if (nomeClasse == "modo-dark") {
             olho2.src = "./assets/eye-closeDK.png";
         } else {
             olho2.src = "./assets/eye-close.png";
         }
-    }
+    } 
 };
