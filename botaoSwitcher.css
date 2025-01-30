@@ -28,7 +28,7 @@
 }
 
 .btn.active:before {
-    left: 54px; /* Altere este valor conforme o efeito desejado */
+    left: 54px;
 }
 
 .modo-claro {
