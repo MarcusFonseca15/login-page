@@ -85,8 +85,13 @@ list-style: square;
     font-weight: 900;
     margin-bottom: -10px;
 }
+.login-block .login-header .destaque-roxo{
+    color: blueviolet;
+}
+
 .conteiner .login-block p {
     font-size: 14px;
+    margin-bottom: -10px;
 }
 
 .login-area{
@@ -169,6 +174,13 @@ list-style: square;
     cursor: pointer;
 }
 
+.login-area label{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 25px;
+    font-size: small;
+}
 .login-area button{
     align-self: center;
     width: 90%;
@@ -180,6 +192,7 @@ list-style: square;
     background-color: var(--roxo);
     color: white;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 .login-block .login-alter{
@@ -224,8 +237,9 @@ list-style: square;
     justify-content: center;
     gap: 10px;
     padding: 0 20px;
-    text-decoration: none;
-    text-transform: none;
+}
+.sites-alter a {
+    text-decoration: none; /* Remove a linha de baixo do link */
 }
 .sites-alter .site img{
     width: 25px;
