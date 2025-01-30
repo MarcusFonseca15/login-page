@@ -1,27 +1,3 @@
-/*<!--ADICIONAR ITNERATIVIDADE COM MODO CLARO E ESCURO (:root no CSS)-->*/
-:root{
-    --verde: #adff2f;
-    --branco: #ffffff;
-    --preto: #000000;
-}
-* {     /* '*' é seletor universal e se aplica a todos elementos da pag*/
-    color:var(--fontColor);
-    font-family: helvética;
-}
-
-.modo-claro{
-    --bg:var(--verde);
-    --fontColor: var(--preto);
-    --btnFontColor: var(--branco);
-    --btnBg: var(--preto);
-}
-
-.modo-dark{
-    --bg: var(--preto);
-    --fontColor: var(--verde);
-    --btnFontColor: var(--preto);
-    --btnBg: var(--verde);
-}
 /*##################     SELETOR DE TEMAS     ##################*/
 
 body {
@@ -45,6 +21,7 @@ list-style: square;
 }
 /*--------------CONTEINER----------------------*/
 .conteiner{
+    display: flex;
     background-color: #1E1E2D;
     position: absolute;
     top: 50%;
@@ -69,26 +46,195 @@ list-style: square;
     background-position: center;
 }
 
-.conteiner .login-block{
-   position: absolute;
-   top: 0;
-   right: 0;
-   width: 50%;
-   height: 100%;
-   background-color: red;
-}
-
 .conteiner .img-block{
     position: absolute;
+    flex: 1;
+    overflow: hidden;
     top: 0;
     left: 0;
     width: 50%;
     height: 100%;
+    z-index: 1;
 }
+.img-block img {
+    height: 100%; width: 100%;
+    object-fit: cover;
+    border-right: 10px solid #aaa;
+}
+
+.conteiner .login-block{
+    position: absolute;
+    display: flexbox;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--bgConteiner);
+    z-index: 2;
+}
+
+.conteiner .login-block .login-header{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 25px;
+}
+.conteiner .login-block h1 {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: -10px;
+}
+.conteiner .login-block p {
+    font-size: 14px;
+}
+
+.login-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.login-area .inicio-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:10px;
+    padding: 15px;
+}
+
+.login-area .inicio-area .emailField,
+.login-area .inicio-area .nomeField {
+    background-color: var(--bgTextFundo);
+    height: 40px; 
+    width: 460px;
+    border-radius: 50px;
+    display: flex; /* Alinha o input corretamente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 0 20px;
+}
+.emailField input,
+.nomeField input {
+    background-color: transparent;
+    color: var(--fontColor);
+    outline: none;
+    border: none;
+    width: 100%; /* Ocupa todo o espaço disponível */
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.emailField input::placeholder,
+.nomeField input::placeholder{
+    color: var(--colorPlaceholder);
+}
+
+.login-area .senha-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 15px;
+}
+
+.login-area .senha-area #PassFild1, #PassFild2{
+    background-color: var(--bgTextFundo);
+    width: 90%;
+    height: 40px; 
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    justify-content: space-between;
+}
+
+.login-area .senha-area input{
+    background-color: transparent;
+    color: var(--fontColor);
+    width: 100%;
+    padding: 10px 0; /* Ocupa todo o espaço disponível */
+    outline: none;
+    border: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 400px;
+}
+.login-area .senha-area input::placeholder{
+    color: var(--colorPlaceholder);
+}
+
+.login-area .senha-area img{
+    width: 20px;
+    cursor: pointer;
+}
+
+.login-area button{
+    align-self: center;
+    width: 90%;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: var(--roxo);
+    color: white;
+    font-weight: bold;
+}
+
+.login-block .login-alter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.login-alter .divisor{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    width: 90%;
+    padding-bottom: 10px;
+    left: 0;
+    right: 0;
+    color: var(--colorDivisor);
+    gap: 10px;
+}
+.divisor hr {
+    flex-grow: 1; /* Faz as linhas ocuparem o espaço disponível */
+    border: none;
+    height: 2px; /* Espessura da linha */
+    background-color: var(--colorDivisor); /* Cor da linha */
+}
+
+.login-alter .sites-alter{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 50px;
+    padding: 20px;
+}
+.sites-alter .site{
+    background-color: var(--bgTextFundo);
+    color: var(--fontColor);
+    border-radius: 20px;
+    height: 50px; width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 20px;
+    text-decoration: none;
+    text-transform: none;
+}
+.sites-alter .site img{
+    width: 25px;
+}
+
 
 /*----------- BOTAO DE SWITCH THEME -----------*/
 .btn{
-    color:var(--btnFontColor);
+    color: var(--btnFontColor);
     background-color: var(--btnBg);
 }
 

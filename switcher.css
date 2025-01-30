@@ -1,0 +1,44 @@
+/*<!--ADICIONAR ITNERATIVIDADE COM MODO CLARO E ESCURO (:root no CSS)-->*/
+:root{
+    /*DARK*/
+    --roxo: #6B46C1;
+    --dk-roxo-fundo: #553C9A;
+    --dk-cinza-texto: #4A5568;
+    --dk-preto-conteiner: #1A202C;
+    --dk-preto-placeholder: #ffffff74;
+    --dk-preto-divisor: #4A5568;
+    /*LIGHT*/
+    --lg-lilas-fundo: #9F7AEA;
+    --lg-cinza-texto: #E2E8F0;
+    --lg-cinza-placeholder: #676767;
+    --lg-cinza-divisor: #9fa3ab;
+
+}
+* {     /* '*' é seletor universal e se aplica a todos elementos da pag*/
+    color:var(--fontColor);
+    font-family: "DM Sans", sans-serif;
+}
+
+.modo-claro{
+    --bg: var(--lg-lilas-fundo);
+    --fontColor: black;
+    --bgConteiner: white;
+    --bgTextFundo: var(--lg-cinza-texto);
+    --colorPlaceholder: var(--lg-cinza-placeholder);
+    --colorDivisor: var(--lg-cinza-divisor);
+
+    --btnFontColor: var(--branco);
+    --btnBg: var(--preto);
+}
+
+.modo-dark{
+    --bg: var(--dk-roxo-fundo);
+    --fontColor: white;
+    --bgConteiner: var(--dk-preto-conteiner);
+    --bgTextFundo: var(--dk-cinza-texto);
+    --colorPlaceholder: var(--dk-preto-placeholder);
+    --colorDivisor: var(--dk-preto-divisor);
+
+    --btnFontColor: var(--preto);
+    --btnBg: var(--verde);
+}

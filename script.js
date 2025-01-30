@@ -1,16 +1,3 @@
-
-function efeito() {
-    var campos = document.querySelectorAll("#TxFSenha, #TxFConfSenha"); //Selecionar especificamente o '#' Id 
-    
-    campos.forEach(function(x) {
-        if (x.type === "password") {
-            x.type = "text";
-        } else {
-            x.type = "password";
-        }
-    });
-}
-
 /*-------- THEME SWITCH -----------*/ 
 document.addEventListener('DOMContentLoaded', function() {
 const trocar = document.querySelector('.btn');
@@ -18,6 +5,9 @@ const trocar = document.querySelector('.btn');
 trocar.addEventListener('click', function(){
     document.body.classList.toggle('modo-dark');
     document.body.classList.toggle('modo-claro');
+
+    let olho1 = document.getElementById("olho1");
+    let olho2 = document.getElementById("olho2");
 
     var nomeClasse = document.body.className;
 
@@ -35,5 +25,29 @@ trocar.addEventListener('click', function(){
     trocar.textContent = "Ativar para modo Escuro";
 });
 
+/*---------------VER A SENHA--------------*/
+let olho1 = document.getElementById("olho1");
+let olho2 = document.getElementById("olho2");
+let senha = document.getElementById("TxFSenha");
+let confSenha = document.getElementById("TxFConfSenha");
 
+olho1.onclick = function() {
+    let nomeClasse = document.body.className;
+
+    if (senha.type == "password") {
+        senha.type = "text";
+        if (nomeClasse == "modo-claro") {
+            olho1.src = "./assets/eye-openLG.png";
+        } else {
+            olho1.src = "./assets/eye-open.png";
+        }
+    } else {
+        senha.type = "password";
+        if (nomeClasse == "modo-dark") {
+            olho1.src = "./assets/eye-closeDK.png";
+        } else {
+            olho1.src = "./assets/eye-close.png";
+        }
+    }
+};
 

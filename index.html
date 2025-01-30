@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./switcher.css">
     <link rel="stylesheet" href="./style.css">
 
     <title>Página de Login</title>
+
+    <!-- Links para trazer os ícones via CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"/>
 </head> 
 <body>
 
@@ -21,32 +27,57 @@
                     <p>Já tem uma conta? Faça <a href="../Cafeteria/index.html">login aqui</a></p>
                 </div>
 
-                <div class="login-area"></div>
-                <input type="text" id="TxFEmail" placeholder="seuemail@dominio.com"> 
-                <input type="text" id="TxFNome" placeholder="Seu nome"> <br>
-                <input type="password" id="TxFSenha" placeholder="Digite sua senha (Minimo de 5 caracteres)" minlength="8"><br>
-                <input type="password" id="TxFConfSenha" placeholder="Confirme sua senha" minlength="8">
-                <input type="checkbox" onclick="efeito()"> Ver senhas
+                <div class="login-area">
+                    <div class="inicio-area">
+                        <div class="emailField">
+                            <input type="text" id="TxFEmail" placeholder="seuemail@dominio.com"> 
+                        </div>
+                        <div class="nomeField">
+                         <input type="text" id="TxFNome" placeholder="Seu nome">
+                        </div>
+                    </div>
+                    <div class="senha-area">
+                        <div class="password-field" id="PassFild1">
+                            <input type="password" id="TxFSenha" placeholder="Digite sua senha (Minimo de 8 caracteres)" minlength="8">
+                            <img src="./assets/eye-close.png" id="olho1">
+                        </div>
+                        <div class="password-field" id="PassFild2">
+                            <input type="password" id="TxFConfSenha" placeholder="Confirme sua senha" minlength="8">
+                            <img src="./assets/eye-close.png" id="olho2">
+                        </div>
+                        <label><input type="checkbox">Lembrar mais tarde</label>
+                        <!---->
+                    </div>
 
+                    <button>Registrar conta</button>
+                </div> <!--login-area-->
+                
                 <div class="login-alter">
+                    <div class="divisor">
+                        <hr>
+                        ou entrar com <hr>
+                    </div>
+                    <div class="sites-alter">
+                        <a href="https://google.com">
+                            <div class="site">
+                                <img src="./assets/google.png">
+                                Google
+                            </div>
+                        </a>
 
-                </div>
-            </div>
+                        <a href="instagram.com">
+                            <div class="site">
+                                <img src="./assets/instagram.png">
+                                Instagram
+                            </div>
+                        </a>
+                    </div>
+                </div> <!--login-alter-->
 
-        </div>
+            </div><!--login-block-->
+
+        </div><!--content-->
     </div>
-
-
-    <h1>Mensagem de Boas Vindas</h1>
-    <p id="msg">Current Tasks:</p>
-    <ul>
-        <li class="list">Label Email</li>
-        <li class="list">Label Senha</li>
-        <li class="list">Label Nome</li>
-        <li>TxF Email</li>
-        <li>TxF Senha</li>
-        <li>TxF Nome</li>
-    </ul>
 
     <button class="btn">Mudar para DARK</button>
     
