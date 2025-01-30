@@ -1,29 +1,22 @@
 /*-------- THEME SWITCH -----------*/ 
+
 document.addEventListener('DOMContentLoaded', function() {
-const trocar = document.querySelector('.btn');
+    const btn = document.querySelector('.btn');
+    const conteiner = document.body;
 
-trocar.addEventListener('click', function(){
-    document.body.classList.toggle('modo-dark');
-    document.body.classList.toggle('modo-claro');
+    conteiner.classList.add('modo-claro');
 
-    let olho1 = document.getElementById("olho1");
-    let olho2 = document.getElementById("olho2");
+    btn.addEventListener('click', function() {
+        conteiner.classList.toggle('modo-dark');
+        conteiner.classList.toggle('modo-claro');
 
-    var nomeClasse = document.body.className;
+        let nomeClasse = conteiner.className;
 
-    if(nomeClasse == "modo-claro"){
-        this.textContent = "Mudar para DARK";
-    } 
-    else {
-        this.textContent = "Mudar para CLARO";
-    } 
-
-    console.log('Estado atual: ' + nomeClasse);
+        this.classList.toggle('active');
+        console.log('Estado atual: ' + nomeClasse);
     });
-
-    document.body.classList.add('modo-claro');
-    trocar.textContent = "Ativar para modo Escuro";
 });
+
 
 /*---------------VER A SENHA--------------*/
 let olho1 = document.getElementById("olho1");
@@ -51,3 +44,22 @@ olho1.onclick = function() {
     }
 };
 
+olho2.onclick = function() {
+    let nomeClasse = document.body.className;
+
+    if (senha.type == "password") {
+        senha.type = "text";
+        if (nomeClasse == "modo-claro") {
+            olho2.src = "./assets/eye-openLG.png";
+        } else {
+            olho2.src = "./assets/eye-open.png";
+        }
+    } else {
+        senha.type = "password";
+        if (nomeClasse == "modo-dark") {
+            olho2.src = "./assets/eye-closeDK.png";
+        } else {
+            olho2.src = "./assets/eye-close.png";
+        }
+    }
+};

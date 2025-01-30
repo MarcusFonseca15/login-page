@@ -244,28 +244,3 @@ list-style: square;
 .sites-alter .site img{
     width: 25px;
 }
-
-
-/*----------- BOTAO DE SWITCH THEME -----------*/
-.btn{
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
-}
-
-.btn{
-    position: absolute;
-    bottom: 20px;
-    left: 60px;
-    height: 60px;
-    width: 130px;
-    border-radius: 30px;
-    border: white;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
-}
-.btn:hover{
-    cursor: pointer;
-    background-color: wheat;
-    color: #000000;
-}
-.btn:focus{ outline-style: none;} /*tira o contorno retangular qnd é selecionado*/

@@ -1,0 +1,56 @@
+/*----------- BOTAO DE SWITCH THEME -----------*/
+.btn {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 60px;
+    cursor: pointer;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color .5s, color .5s;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    transition: left .5s;
+}
+
+.btn.active:before {
+    left: 54px; /* Altere este valor conforme o efeito desejado */
+}
+
+.modo-claro {
+    --bg: var(--lg-lilas-fundo);
+    --fontColor: black;
+    --bgConteiner: white;
+    --bgTextFundo: var(--lg-cinza-texto);
+    --colorPlaceholder: var(--lg-cinza-placeholder);
+    --colorDivisor: var(--lg-cinza-divisor);
+    --btnFontColor: var(--branco);
+    --btnBg: var(--preto);
+    transition: all .5s;
+}
+
+.modo-dark {
+    --bg: var(--dk-roxo-fundo);
+    --fontColor: white;
+    --bgConteiner: var(--dk-preto-conteiner);
+    --bgTextFundo: var(--dk-cinza-texto);
+    --colorPlaceholder: var(--dk-preto-placeholder);
+    --colorDivisor: var(--dk-preto-divisor);
+    --btnFontColor: var(--preto);
+    --btnBg: var(--verde);
+    transition: all .5s;
+}
